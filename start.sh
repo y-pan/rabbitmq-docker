@@ -2,8 +2,16 @@ export ROOTDIR=`pwd`
 export VOLUMES=$ROOTDIR/volumes
 mkdir -p $VOLUMES
 
-chmod a+x config/secret.sh
-. config/secret.sh
+secret=config/secret.sh
+secretExample=config/secret.example.sh
+
+if [ ! -f "$secret" ]; then
+    echo "Aborted! \nPlease create file: $secret \nAn example is: $secretExample"
+    exit 1
+fi
+
+chmod a+x $secret
+. $secret
 . config/config.sh
 
 plugins='[rabbitmq_management].'

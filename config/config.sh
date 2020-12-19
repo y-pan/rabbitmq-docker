@@ -1,4 +1,3 @@
-
 ## non-secret ##
 export RABBITMQ_PORT=5672
 export RABBITMQ_ADMIN_PORT=15672
