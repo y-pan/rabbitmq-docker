@@ -10,4 +10,4 @@ plugins='[rabbitmq_management].'
 
 echo  ${plugins} > $RABBITMQ_ENABLED_PLUGINS
 
-docker-compose up
+docker-compose up -d
