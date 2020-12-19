@@ -2,6 +2,7 @@ export ROOTDIR=`pwd`
 export VOLUMES=$ROOTDIR/volumes
 mkdir -p $VOLUMES
 
+chmod a+x config/secret.sh
 . config/secret.sh
 . config/config.sh
 
